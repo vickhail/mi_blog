@@ -1,7 +1,9 @@
 /* ============================
    RESET Y BASE
    ============================ */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -47,6 +49,7 @@ h2 {
     font-size: 0.85rem;
     margin-bottom: 12px;
 }
+
 .btn {
     display: inline-block;
     background-color: var(--color-primary);
@@ -67,4 +70,204 @@ h2 {
     max-width: 600px;
     margin: 30px auto;
     padding: 0 20px;
+}
+
+/* Descendiente: A B */
+nav a {
+    color: var(--color-white);
+    text-decoration: none;
+    margin: 0 12px;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+/* Hijo directo: A > B */
+ul>li {
+    list-style: none;
+    padding: 5px 0;
+}
+
+/* Hermano adyacente: A + B */
+h2+p {
+    font-size: 0.9rem;
+    color: var(--color-muted);
+    font-style: italic;
+}
+
+/* Hermanos generales: A ~ B */
+.meta~p {
+    margin-bottom: 8px;
+}
+
+/* Agrupacion: A, B, C */
+h1,
+h2,
+h3 {
+    font-family: var(--font-heading);
+    line-height: 1.3;
+}
+
+#contacto h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+/* Prueba: agrega esto y observa */
+.post h2 {
+    color: #B91C1C;
+    /* rojo */
+}
+
+/* Ahora agrega esto DESPUES */
+.post h2 {
+    color: var(--color-primary);
+    /* teal - GANA */
+}
+
+header {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 30px 20px 20px;
+    text-align: center;
+}
+
+main {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+aside {
+    background-color: #F1F5F9;
+    padding: 20px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+aside h3 {
+    color: var(--color-primary);
+    margin-bottom: 8px;
+    margin-top: 15px;
+}
+
+aside h3:first-child {
+    margin-top: 0;
+}
+
+nav a {
+    display: inline-block;
+    color: var(--color-white);
+    text-decoration: none;
+    margin: 0 8px;
+    padding: 6px 14px;
+    border-radius: 4px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-top: 15px;
+    color: var(--color-text);
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    font-family: var(--font-main);
+    font-size: 1rem;
+}
+
+button {
+    display: inline-block;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 10px 30px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+header p {
+    font-size: 0.95rem;
+    opacity: 0.85;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.15rem;
+}
+
+/* Enlaces generales */
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+/* Subrayado solo al hacer hover */
+a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: var(--color-primary-dark);
+    color: var(--color-white);
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+}
+
+header {
+    background: linear-gradient(135deg,
+            var(--color-primary),
+            var(--color-primary-dark));
+    color: var(--color-white);
+    padding: 30px 20px 20px;
+    text-align: center;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.25);
+}
+
+aside a {
+    color: var(--color-primary);
+    font-weight: bold;
+}
+
+aside a:hover {
+    color: var(--color-accent);
+}
+
+.post {
+    /* ... mantener propiedades anteriores ... */
+    transition: box-shadow 0.3s ease;
+}
+
+.post:hover {
+    box-shadow: 0 4px 12px rgba(255, 0, 170, 0.1);
 }
